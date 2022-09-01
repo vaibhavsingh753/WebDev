@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+    <h1>Arrow Functions in JS</h1>
+    <div class="container">
+        This is arrow function tutorial
+    </div>
+
+</body>
+<script>
+    // function greet(){
+    //     console.log("Good Moring");
+    // }
+    //below is the Arroe function for the above
+    greet = () => { console.log("Good Morning!!!"); }
+    greet();
+    //can be written as below too, if no argumnet put()
+    greet = () => console.log("Good Morning!!!");
+    greet();
+
+    setTimeout(() => {
+        console.log("We are inside setTimeout function");
+    }, 3000);
+
+    // let sum = (a, b) =>{
+    //     return a+b;
+    // }
+    //above can be written as below too
+    let sum = (a, b) => a + b;
+    console.log(sum(5, 5));
+
+    let half = a => a / 2;
+    console.log(half(44));
+
+    //Objects
+
+    let obj1 = {
+        names: ["Vaibhav", "Harry", "Rohan", "DJJJ"],
+        age: [24, 34, 45, 55],
+        greeting : "good Morning",
+        speak() {
+            this.names.forEach((student) => {
+                console.log(this.greeting+ " Kukudo kooo: " + student);
+            });
+        },
+        ages() {
+            this.age.forEach((ageYears) => {
+                console.log(" Age is " + ageYears);
+            });
+        },
+        nameAndAge(){
+            for(var i = 0; i<obj1.names.length; i++ ){
+                console.log(this.names[i] + " Age is " + this.age[i]);
+            }
+        },
+
+    }
+    obj1.speak();
+
+    console.log(obj1.names[1]);
+
+    obj1.ages();
+    obj1.nameAndAge();
+
+    console.log(obj1.names.length);
+</script>
+
+</html>

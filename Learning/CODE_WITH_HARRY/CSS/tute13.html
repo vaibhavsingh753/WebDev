@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial</title>
+
+    <!-- This is an example of External CSS, if its written before Internal CSS Internal will 
+        take precedence -->
+    <!-- <link rel="stylesheet" href="tute13.css">  -->
+    <!-- Inline CSS takes precedence over Internal CSS -->
+    <!-- This is an example of Intenal CSS to be avoided -->
+    <style>
+        p {
+            color: yellow;
+            background-color: yellowgreen !important;
+            /* Putting !important here means , background-color: yellowgreen will be taking precedence
+            even if External CSS linked later; */
+        }
+    </style>
+
+    <!-- This is an example of External CSS, if its written after INternal CSS it will take precedence 
+    this happens because this will be overwriting earlier properties unless !important tag is used-->
+    <link rel="stylesheet" href="tute13.css">
+
+</head>
+
+<body>
+    <h2>This is the CSS Tutorial</h2>
+    <!-- This is an example of Inline CSS to be avoided -->
+    <!-- <p style="color: red; background-color: aqua;">This tutorial will teach us all about CSS.</p> -->
+    <p>This tutorial will teach us all about CSS.</p>
+
+</body>
+</htmp

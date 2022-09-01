@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model, Margin and Padding</title>
+    <style>
+        /* belopw is the universal selector applies properties to all boxes */
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        h2{
+            background-color: rgb(165, 73, 86);
+            color: rgb(187, 219, 41);
+        }        
+        .container {
+            color: azure;
+            background-color: rgb(41, 12, 59);
+            border: 3px solid rgb(243 118 118);
+          
+            /* padding: 39px; (same padding for all 4 borders) */
+            /* we can do margin/padding specific to top and bottom , left and right also */
+            /* padding-left: 60px; */
+            /* margin-left: 60px; */
+            
+            /* it can be done as below also */
+            /* padding: 30px 50px 40px 70px; padding: top right bottom left */
+            /* margin: 30px 50px 40px 70px; padding: top right bottom left */
+
+            /* it can be done as below also */
+            padding:34px 19px;/* padding:y(top/bottom) x(left/right) */
+            margin: 14px 19px;/* margin:y(top/bottom) x(left/right) */
+            border-radius: 23px;
+            width: 533px;
+            /* adjusts the width size as per padding, if its not there changing the padding may change the width also  */
+            box-sizing: border-box;
+        
+        }
+        #image{
+            padding: 30px;
+            border: 2px solid red;
+        }
+        body{
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>This is the Box model</h2>
+    <div id="image">
+    <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/CSS-Box-Model.png" alt="box model"
+        width="400px" height="200px">
+    </div>
+
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="firstPara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque minima, eaque debitis odio
+            recusandae
+            ducimus. Nobis explicabo, cupiditate debitis totam similique libero eaque.</p>
+    </div>
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="secondPara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque minima, eaque debitis odio
+            recusandae
+            ducimus. Nobis explicabo, cupiditate debitis totam similique libero eaque.</p>
+    </div>
+    <div class="container">
+        <h3>This is my heading</h3>
+        <p id="thirdPara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque minima, eaque debitis odio
+            recusandae
+            ducimus. Nobis explicabo, cupiditate debitis totam similique libero eaque.</p>
+    </div>
+</body>
+
+</html>

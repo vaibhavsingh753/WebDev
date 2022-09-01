@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigating the DOM</title>
+</head>
+<body>
+    <h1>Navigating the DOM</h1>
+    <div class="container" id="main">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>About Us</li>
+            <li>Constact Us</li>
+        </ul>
+    </div>
+    <div class="container">
+        This is annother container
+    </div>
+    
+</body>
+
+<script>
+    let mainContainer = document.getElementById("main");
+    console.log(mainContainer);
+
+    //Gets the inner HTML inside the ID
+    let navigation = document.getElementById("nav").innerHTML;
+    console.log(navigation);
+
+    let otherContainer = document.getElementsByClassName('container');
+    //this will return the HTML content of the second container
+    console.log(otherContainer[1].innerHTML);
+
+    let selector = document.querySelector("#nav").innerHTML;
+    console.log(selector);
+    //Returns the first li under nav
+    let selector2 = document.querySelector("#nav>li").innerHTML;
+    console.log(selector2);
+    //Returns the all the li under nav
+    let selector4 = document.querySelectorAll("#nav>li");
+    //returns the inner element of the 4th li , i.e. About Us
+    console.log(selector4[3].innerHTML);
+
+    let selector3 = document.querySelector("h1").innerHTML;
+    console.log(selector3);
+
+    let selector5 = document.querySelectorAll("#nav>li");
+    //Modifies the 4th element of the selector
+    selector5[3].innerHTML = "inserted insted of About Us"
+    //returns the inner element of the 4th li , i.e. About Us
+    console.log(selector4[3].innerHTML);
+    </script>
+</html>

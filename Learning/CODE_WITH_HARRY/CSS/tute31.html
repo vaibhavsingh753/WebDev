@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selectors</title>
+    <style>
+        h1{
+            color: red;
+            background-color: aqua;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        /* if we want all the paragraph tags that are inside a div we can use this */
+        /* last paraghraph will not have the properties */
+        div p{
+            background-color: yellow;
+            color: rgb(7, 70, 124);
+            font-weight: bold;
+        }
+        /* If p is contained by any li which is contained by div */
+        div li p{
+            background-color: purple;
+            color: aliceblue;
+            font-weight: 500;
+        }
+        /* If p  is direct child of div, i.e. p is right inside div */
+        div > p{
+            background-color: black;
+            color: white;
+            
+        } 
+        div + p{
+            color: aliceblue;
+            background-color: rgb(204, 137, 137);
+        }
+        /* If p has a pervious sibling that  is a div, i.e. p is right after div, p is next sibling of div  */
+    </style>
+</head>
+<body>
+    <h1>This is more on Selectors</h1>
+    <div class="container">
+    <div class="row">
+        <ul>
+            <li class="item">1 para inside li</li>
+            <li class="item"><p> 2 para inside li</p></li>
+            <li class="item"><p>3 para inside li</p> </li>
+            <li class="item">4 para inside li</li>
+            <p>This is a para inside ul</p>
+        </ul>
+        <p>This is a Paragraph</p>
+    </div>
+    <p>This is annother paragraph</p>
+</div>
+<p>This is the last paragraph</p>
+</body>
+</html>

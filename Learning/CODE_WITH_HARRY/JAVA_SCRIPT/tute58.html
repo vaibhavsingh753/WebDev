@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS : setInterval & setTimeOut</title>
+</head>
+<body>
+    <div class="container">
+        <h1>This is a container heading</h1> 
+    </div>
+    <br>
+    Time now is
+    <span id="time"> 
+
+    </span>
+    
+</body>
+<script>
+    console.log("This is the container ");
+    //setTimeout - Allows us to run the function once after the time interval
+    //clearTimeout - Allows us to run the function repeatedly after the time interval
+
+    function greetings(name, bye){
+        console.log("Hello Good Morning " + name + " " + bye);
+    }
+    // // can pass the parameter in either ways but in below case the delay wont work
+    // setTimeout(greetings( "vaibhav", "take care"), 6000);
+    // // correct way: here the delay works - dont call function inside setTImeout only the function name
+    // setTimeout(greetings, 1000,  "vaibhav", "Take care");
+    // //if parameter is not passes and only name is give then it dosnt five delay
+    // setTimeout(greetings(), 1000)
+
+    // console.log("----------------------------------");
+
+    // //clearTimeout
+    // timeoutID = setTimeout(greetings, 3000, "Vaibhav" , "good Bye");
+    // console.log(timeoutID);
+    // // here the value 5 is the timeoutID value and doing clearTimeout will not log the previous line
+    // //function inside seTimeout wont run
+    // clearTimeout(5);
+
+    // intervalID = setInterval(greetings, 2000, "Harry" , "BYEEE!");
+    // clearInterval(intervalID);
+
+    function displayTime(){
+        let time = new Date();
+        console.log(time);
+        document.getElementById("time").innerHTML = time
+    }
+    setInterval(displayTime, 1000)
+
+
+</script>
+</html>

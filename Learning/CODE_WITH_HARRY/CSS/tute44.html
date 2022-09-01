@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                "navbar navbar navbar navbar"
+                "sections sections sections aside"
+                "foot foot foot foot";
+
+                grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+
+
+        }
+
+        .items {
+            background-color: yellow;
+            border: 3px solid black;
+            padding: 12px 23px;
+
+        }
+
+        #navbar {
+            grid-area: navbar;
+        }
+
+        #section {
+            grid-area: sections;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
+        footer{
+            grid-area: foot;
+            background-color: aqua;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="navbar" class="items">
+            Home About Contact Us
+        </div>
+        <div id="section" class="items">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque temporibus, doloribus iusto illum neque
+            modi quisquam nisi error minima, voluptate, ullam rem nesciunt!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio soluta ab modi totam accusantium! Ea,
+            eos! Cum ad, odio expedita id autem laboriosam. Praesentium sapiente molestias quod nam a quam temporibus
+            maiores architecto possimus! Nihil iusto labore expedita deleniti praesentium ex! Aut aliquam excepturi, sit
+            nisi voluptates distinctio officiis dolor?
+        </div>
+        <div id="aside" class="items">
+            Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. In nemo repellendus iusto. Illo voluptatem
+            ullam autem maiores nesciunt rem officiis tempora obcaecati vitae nobis voluptates dolor cum quae deleniti
+            in illum, praesentium reiciendis, eveniet, ea repellat molestiae eos ipsa et. Vitae nesciunt amet distinctio
+            ut. ipsum dolor sit amet consectetur adipisicing elit. Laboriosam praesentium deleniti aliquid.
+        </div>
+        <!-- <div class="item">Item-1</div>
+        <div class="item">Item-2</div>
+        <div class="item">Item-3</div>
+        <div class="item">Item-4</div>
+        <div class="item">Item-5</div> -->
+        <!-- <div class="item">Item-6</div>
+        <div class="item">Item-7</div>
+        <div class="item">Item-8</div>
+        <div class="item">Item-9</div>
+        <div class="item">Item-10</div>
+        <div class="item">Item-11</div>
+        <div class="item">Item-12</div>
+        <div class="item">Item-13</div>
+        <div class="item">Item-14</div> -->
+    </div>
+    <footer>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident accusantium tempore aliquam!
+    </footer>
+
+</body>
+
+</html>

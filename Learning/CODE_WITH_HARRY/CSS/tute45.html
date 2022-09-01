@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid + Media Queries</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                "navbar navbar navbar navbar"
+                "sections sections sections aside"
+                "foot foot foot foot";
+
+        }
+
+        nav {
+            grid-area: navbar;
+        }
+
+        section {
+            grid-area: sections;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: foot;
+            text-align: center;
+        }
+
+        .bdr {
+            border: 2px solid black;
+            padding: 23px;
+            background-color: bisque;
+        }
+
+        @media only screen and (max-width:300px) {
+            body {
+                display: block;
+                background-color: red;
+            }
+
+            .container {
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-areas:
+                    "navbar navbar navbar navbar"
+                    "sections sections sections sections"
+                    "aside aside aside aside"
+                    "foot foot foot foot";
+
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+
+            aside {
+                display: none;
+            }
+        }
+
+        @media only screen and (min-width: 300px) and (max-width:500px) {
+            body {
+                display: block;
+                background-color: blue;
+            }
+
+            .container {
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-areas:
+                    "navbar navbar navbar navbar"
+                    "sections sections sections sections"
+                    "aside aside aside aside"
+                    "foot foot foot foot";
+
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+
+            aside {
+                display: none;
+            }
+        }
+
+        @media (min-width: 500px) and (max-width:800px) {
+            body {
+                display: block;
+                color: black;
+                background-color: yellow;
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+
+            .container {
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-areas:
+                    "navbar navbar navbar navbar"
+                    "sections sections sections sections"
+                    "aside aside aside aside"
+                    "foot foot foot foot";
+
+            }
+
+        }
+
+        @media (min-width: 800px) {
+            body {
+                display: block;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Using Media Queries with CSS Grid</h1>
+    <div class="container">
+        <nav class="bdr">
+            <span>Home</span>
+            <span>About</span>
+            <span>Contact</span>
+            <span>Seivices</span>
+        </nav>
+        <section class="bdr">
+            <h3> Learninig CSS</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia velit nihil distinctio enim ipsum et,
+                amet officiis impedit iure hic non obcaecati eos dolore totam exercitationem placeat fugit dolorem quos
+                nulla vel, architecto deleniti quis dolorum nesciunt. Nam doloremque a provident eligendi eaque corrupti
+                debitis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia incidunt est consequuntur
+                iure, ab laudantium maiores voluptas perspiciatis ducimus, a et quidem blanditiis architecto iusto
+                dolorum vero maxime dolore corporis sequi possimus nulla porro laboriosam id. Commodi architecto rerum
+                provident aut minima dolore.
+            </p>
+        </section>
+
+        <aside class="bdr">
+            <h2>More about us</h2>
+        </aside>
+        <footer class="bdr"> 
+            Copyright &copy;
+        </footer>
+
+    </div>
+
+
+</body>
+
+</html>

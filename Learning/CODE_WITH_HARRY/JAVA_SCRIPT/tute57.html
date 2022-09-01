@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Listening to Events</title>
+    <style>
+        button{
+            padding: 13px;
+            color: red;
+            border: 2ps solid black;
+            border-radius: 23px;
+            background-color: antiquewhite;
+        }
+
+        #btn:hover{
+            padding: 34px;
+            color: rgb(198, 211, 83);
+            border: 2ps solid black;
+            border-radius: 23px;
+            background-color: rgb(23, 6, 85);
+            cursor: pointer;
+
+        }
+        #btn:focus{
+            padding: 34px;
+            color: rgb(57, 32, 116);
+            border: 2ps solid black;
+            border-radius: 23px;
+            background-color: rgb(188, 181, 214);
+            cursor: pointer;
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1>Events & Listening to Events on the browser</h1>
+    <!-- Browser Events: 
+        click
+        contextmenu
+        mouseover/mouseout
+        mousedown/mouseup
+        mousemove
+        
+        submit
+        focus
+        
+        DOMContentLoaded
+        transitioned -->
+    <div class="container" style="color: blue; font-weight: 600;">
+        <h2>Event listeners in JS</h2>
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptates neque itaque minima commodi quod
+            facere cum quam tempora doloremque, sequi ea laborum obcaecati exercitationem! Consectetur accusantium quam,
+            nihil mollitia voluptas non, exercitationem cumque ad ipsum vero pariatur aspernatur adipisci earum saepe
+            fugit natus rerum.</p>
+        <button id="btn" onclick="hide()">Show/Hide</button>
+    </div>
+
+</body>
+<script>
+
+    let para = document.getElementById("para");
+    para.addEventListener("mouseover", function run(){
+        para.style.color = 'red';
+        console.log("Mouse inside para");
+    });
+    para.addEventListener("mouseout", function(){
+        para.style.color = 'blue';
+        console.log("Mouse outside para");
+    });
+
+    function hide(){
+        let btn = document.getElementById("btn");
+        let para = document.getElementById("para");
+        //Hides the para on clicking Hide/Show
+        
+        if(para.style.display != "none"){
+            para.style.display = "none";
+        }else{
+            para.style.display = "block";
+        }
+    }
+
+
+</script>
+
+</html>

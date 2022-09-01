@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON in JavaScript </title>
+    <style>
+        h1{
+            color: blue;
+             background-color: yellow; 
+             text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>JSON</h1>
+    <div class="container">
+        This is my container
+    </div>
+    
+</body>
+<script>
+    let jsonObj = {
+        name: "Vaibhav",
+        age: 25,
+        food: "Bhinddi",
+        channel: "vaibhavsresturant.com"
+    }
+
+    console.log(jsonObj);
+    //Below line makes the jsonObj into a single string, all functions that can be done to a string can be done to myJsonObj
+    let myJsonStr = JSON.stringify(jsonObj);
+    console.log(myJsonStr);
+
+    //making into JSON string
+    myJsonStr = myJsonStr.replace('Vaibhav' , 'Singh');
+    console.log(myJsonStr);
+
+    //converting to obj - parses only a valid JSON string
+    newMyJsonStr = JSON.parse(myJsonStr);
+    console.log(newMyJsonStr);
+
+
+
+
+</script>
+</html>

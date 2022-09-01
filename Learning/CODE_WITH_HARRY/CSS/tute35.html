@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables & Custom Properties</title>
+    <style>
+        /* Thie variables insde :root behave as Global variables and can be accessed form the CSS of any class */
+        :root{
+            --primary-color: blue;
+            --danger-color: red;
+            --max-width: 400px;
+            /* --max-height:7px; */
+        }
+        .box {
+            /* Here tee --box-color acts as local variable */
+            --box-color: violet;
+            width: 200px;
+            height: 200px;
+            background-color: var(--box-color);
+            border: 2px solid var(--danger-color);
+            box-shadow: 5px 5px var(--primary-color);
+            margin: 2px 9px;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: auto;
+           
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: var(--danger-color);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Variables & Custom Properties</h1>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+</body>
+
+</html>

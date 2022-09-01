@@ -1,0 +1,21 @@
+.selectDetails{
+    color: red;
+}
+#itallics{
+    font-style: italic;
+}
+#bold{
+    font-weight: 600;
+}
+#normal{
+    font-style:normal;
+}
+p{
+    font-weight: 900;
+}
+h2{
+    font-style: oblique;
+}
+li{
+    background-color: aqua;
+}

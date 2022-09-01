@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions in JavaScript</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+
+    <!-- JavaScript -->
+    <script>
+        var string = "this is a string";
+        console.log(string);
+
+        // First Occurance of a String
+        var index = string.indexOf('is');
+        console.log(index);
+        // Last Occurance of a String
+        index = string.lastIndexOf("is");
+        console.log(index);
+
+        // Substring from a string
+        var substr = string.slice(1,6);
+        console.log(substr)
+        substr = string.substring(1,2);
+        console.log(substr);
+
+        // Replacing substring in string
+        var replace = string.replace('string' , 'vaibhav')
+        console.log(replace)
+
+        //Upper case
+        console.log(string.toUpperCase());
+        //lower case
+        console.log(string.toLowerCase());
+        //concatination
+        var newstring = string.concat("new string")
+        console.log(newstring)
+        //Removes whie spaces
+        var str = "    thi    has a lot of     white spaces    "
+        console.log(str);
+        console.log(str.trim());
+
+        //Find index of desirec character
+        var char3 = str.charAt(4);
+        console.log(char3);
+
+        //CharCodeAt give s the UTF coe of that character
+        console.log(str.charCodeAt(4));
+        //annother way to slice
+        console.log(str[4])
+</script>
+    
+</body>
+</html>

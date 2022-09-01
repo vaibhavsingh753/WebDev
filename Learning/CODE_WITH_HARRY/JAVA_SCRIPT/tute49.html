@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Strings and String Methods</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Heading</h1>
+        <div id="content"></div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In molestiae beatae ipsum dignissimos numquam
+            tempore libero voluptatibus. Ipsam nam doloremque molestias veritatis ex facilis quas a. Adipisci, culpa
+            esse facilis quis fugiat ea consequatur?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus voluptate voluptates fugiat placeat illo,
+            tenetur repudiandae. Rerum reprehenderit et quisquam delectus maiores id eius similique sint corporis, ut
+            quo odio tempora repudiandae laudantium natus, ipsum odit sunt suscipit officia nostrum cum ea. Nam ipsum
+            tempore numquam beatae saepe excepturi error? Eos corporis itaque maiores.</p>
+
+    </div>
+
+    <script>
+        // var sting = "this";
+        var sting = 'this "this" too';
+        // console.log(string)
+
+        var name = "Vaibhav"
+        var message = " is a good boy"
+        var channel = 'code with harry'
+        console.log(name + message)
+
+        // Templates can be made using this
+        var temp =  `${name} is a nice "person" and he studies from a channel called '${channel}'`;  //These are back ticks
+        console.log(temp)
+        var len = name.length;
+        console.log("length of name is " + `${len}`)
+        console.log(`length of name is ${len}`)
+        //Escape characters \n - new line , \t - tab, \\one back slash becomes visible in console
+        console.log("hello world \nvaibhav\tSingh")
+
+        // string constructors
+        var y = new String("This is a constructor string")
+        console.log(y)   
+        
+        // Dynamically inserting an element with JS
+        document.getElementById('content').innerHTML = "<h3> This is a heading </h3>"
+
+    </script>
+
+</body>
+
+</html>

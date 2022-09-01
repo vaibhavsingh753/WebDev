@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Objects</title>
+</head>
+<body>
+    <h1>Arrays and Objects</h1>
+    <div class="container">ye html  hai </div>
+</body>
+<script>
+    // These are primitive data types in JS
+    let var1 = 25;
+    let var2 = "string";
+    let var3 = true;
+    let var4 = null;
+    let var5 = undefined;
+
+    // These are objects, everything thats not a primitive is an Object\
+    let person = {
+        name : "Vaibhav",
+        age : var1,
+        lastname: "Singh",
+        bole: true,
+        int : 2,
+        "full name" : "Vaibahv Singh"
+    }
+    console.log(person);
+
+    console.log(person.age); 
+    console.log(person.name); 
+    console.log(person["lastname"]);
+    console.log('full name');
+    // we cant do the below line for "full name" , throws error
+    // console.log(person.full name);
+
+
+
+    // An array is a special type of object
+    // let arryofmine = [1, null, "Vaibhav"]
+    // console.log(arryofmine);
+    // console.log(arryofmine[2]);
+    // // New is used to create an object
+    // let array2 = new Array(2,2, 1, 4, null, "Vaibhav");
+    // console.log(array2);
+    // console.log(array2[0]);
+
+    // console.log("length of array is " + array2.length);
+
+    // let array3 = array2.sort();
+    // array2 = array2.sort();
+    // console.log(array2);
+    // console.log(array3);
+
+    // array2.push("this gets added to end");
+    // console.log(array2);
+
+    let names = Array(23, 34);
+    console.log(names);
+    console.log(names[1]);
+    // this creats an arry of 45 elements, empty
+    let names2 = Array(45)
+    names2.push("added")
+
+    console.log(names2);
+</script>
+</html>

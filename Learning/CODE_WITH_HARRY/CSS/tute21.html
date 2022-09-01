@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment - Float and Clear</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DynaPuff&family=Quicksand:wght@300&family=Rubik+Marker+Hatch&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            /* font-family: 'DynaPuff', cursive; */
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 900px;
+            border: 3px solid purple;
+            background-color: antiquewhite;
+            /* To center the entire contents of classs container we use margin:auto */
+            margin: 40px auto;
+            /* margin: y(top/bottom) x(left/right)  */
+            font-family: 'DynaPuff', cursive;
+
+        }
+
+        .items {
+            border: 3px solid grey;
+            margin: 18px 18px;
+            padding: 12px 12px;
+            background-color: rgb(216, 143, 156);
+        }
+
+        #fruits {
+            float: left;
+            width: 45%;
+           
+        }
+
+        #computer {
+            float: right;
+            width: 45%;
+        }
+
+        #stationary {
+            /* float: left; */
+            width: 95%;
+            /* clear: left; /*for fruits */
+            /* clear: right; /*for computer */
+            /* for both */
+            clear: both;
+            margin: 19px;
+           
+        }
+
+        #glasses {
+            width: 95%;
+            clear: both;
+            margin: 19px;
+        }
+
+        p,
+        h3 {
+            /* text-align: center;  */
+            text-align: justify;
+        }
+
+        h2 {
+            width: 455px;
+            margin: auto;
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>
+            Using Float and Clear for Alignment
+        </h2>
+        <div id="fruits" class="items">
+            <h3>FRUITS</h3>
+            <p id="fruitsPara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quos
+                deleniti, necessitatibus laudantium numquam, facere qui modi id, illum doloribus quia? Autem hic
+                obcaecati amet voluptatem eligendi maxime voluptas nesciunt? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Rerum repudiandae dolorem eum deserunt laudantium repellendus ipsa voluptatum possimus
+                in temporibus numquam officiis, corporis fugiat ut similique nihil a. Incidunt odit voluptas ea?</p>
+        </div>
+        <div id="computer" class="items">
+            <h3>COMPUTER</h3>
+            <p id="computerPara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quos
+                deleniti, necessitatibus laudantium numquam, facere qui modi id, illum doloribus quia? Autem hic
+                obcaecati amet voluptatem eligendi maxime voluptas nesciunt? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Cum consequatur voluptatibus eaque natus dolores veniam error, facere quam doloremque
+                recusandae quasi eum vitae quidem illo reiciendis placeat fugit dolore sequi nobis ipsum itaque dolorum
+                enim? A quam in aspernatur exercitationem, blanditiis nam suscipit!</p>
+        </div>
+        <div id="stationary" class="items">
+            <h3>STATIONARY</h3>
+            <p id="stationaryPara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quos
+                deleniti, necessitatibus laudantium numquam, facere qui modi id, illum doloribus quia? Autem hic
+                obcaecati amet voluptatem eligendi maxime voluptas nesciunt?</p>
+        </div>
+        <div id="glasses" class="items">
+            <h3>GLASSES</h3>
+            <p id="glassesPara" class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quos
+                deleniti, necessitatibus laudantium numquam, facere qui modi id, illum doloribus quia? Autem hic
+                obcaecati amet voluptatem eligendi maxime voluptas nesciunt?</p>
+        </div>
+    </div>
+</body>
+
+</html>

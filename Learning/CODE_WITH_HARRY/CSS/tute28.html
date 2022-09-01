@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox tutorial</title>
+    <style>
+        .container {
+            height: 344px;
+            width: 100%;
+            border: 2px solid black;
+
+            /* Initalize the container as a flex box */
+            display: flex;
+
+            /*Flex Properties for Flex container */
+            /* default */
+            /* flex-direction: row;  */
+            /* flex-direction: column; */
+            /*Fills the flex continer in row with flext items in reverse */
+            /* flex-direction: row-reverse;*/ 
+            /*Fills the flex continer in column with flext items in reverse */
+            /* flex-direction: column-reverse;*/ 
+            
+            /* flex-wrap: wrap; default is no-wrap */
+            /* flex-wrap: wrap-reverse; */
+            /* Short Hand for flex-direction: and flex-wrap:*/
+            /* flex-flow: row-reverse wrap; */
+            
+            /* to center align (horizontally)*/
+            /* justify-content: center; */
+            /* Space between items only */
+            /* justify-content: space-between; */
+            /* Space between items and border */
+            /* justify-content: space-evenly; */
+            /* Space given for each item on left and right, therefore distace from matgin will be half 
+            of space between 2 items  */
+            /* justify-content: space-around; */
+
+            /* to center align (vertically)*/
+            /* align-items: center; */
+
+            /* Align to the end of flex box */
+            /* align-items: flex-end; */
+             /* Align to the start of flex box */ 
+            /* align-items: flex-start; */
+            /* Creates even space in the gap between items  */
+            /* align-items: stretch; */
+
+
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+
+            background-color: tomato;
+            border: 2px solid blue;
+            margin: 10px;
+            padding: 3px;
+        }
+        /*Flex Properties for Flex items */
+        #item1{
+            /* item1 will be highest order of the 3 items so it moves to the end */
+            /* highest order will be displayed last */
+            order:2;
+
+            /* the ite with hte highest flex grow value will grow streach faster than the others */
+            /* the growth will be proportional to the value fed */
+            /* flex-grow: 2; */
+        }
+        #item2{
+            /* flex-grow: 4; */
+            /* flex shrink will make item smaller when screen is shrunk*/
+            /* flex-shrink: 2; */
+
+            /* when flex-direction is row flex-basis will controle row */
+            /* when flex-direction is row flex-basis will controle row */
+            /* this can be used to control the flex item sixe */
+            flex-basis: 26px;
+        }
+        #item3{
+            order: 40;
+            /* Short hand flex: <flex-grow><flex-shrink><flex-basis> */
+            /* flex: 2 2 240px */
+
+            /* align items ion flex container center (vertically) */
+            align-self: center ;
+             /* align items ion flex container bottom (vertically) */    
+            align-self: flex-end ;
+             /* align items ion flex container top (vertically) */
+            align-self: flex-start ;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>This is Flexbox tutorial</h2>
+    <div class="container">
+        <div class="item" id="item1">First Box</div>
+        <div class="item" id="item2">Second Box</div>
+        <div class="item" id="item3">Third Box</div>
+        <!-- <div class="item" id="item4">Fourth Box</div>
+        <div class="item" id="item5">Fifth Box</div>
+        <div class="item" id="item6">Sixth Box</div> -->
+    </div>
+
+</body>
+
+</html>

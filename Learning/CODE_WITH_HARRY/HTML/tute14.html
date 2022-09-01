@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <!-- Here we are using ID to specifically change secondPara to red with blue back ground using class
+    and firstPara to vlue -->
+    <style>
+        /* To comment in css we use this format , same ctrl + / can be used , VSCode will recognise*/
+
+        /* Puts border around all paras */
+        /* Element selector */
+        p{
+            border: 2px solid red;
+        }
+        /* ID selector */
+        #firstPara {
+            color: green;
+            /* If we do this background color becomes aqua, id properties take recedence over class properties */
+            background-color: aqua;
+        }
+        /* Class selector */
+        .redElement {
+            color: red;
+        }
+        /* Class selector */
+        .bgBlue {
+            background-color: blue;
+        }
+        /* Grouping selector */
+        header,
+        footer {
+            color: aqua;
+        }
+        /* Element selector */
+        span {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        This is the header
+    </header>
+    <h2>CSS Selectors</h2>
+    <p id="firstPara" class="bgBlue">This is a simple Paragraph to demo CSS Selectors</p>
+    <p id="secondPara" class="redElement bgBlue">This is a annother simple Paragraph to demo CSS Selectors</p>
+    <div>
+        <p>This is a yet annother simple Paragraph inside &lt;div&gt; to demo CSS Selectors</p>
+        <span>This is a span</span> 
+        <span>This is the second span</span>
+    </div>
+    <footer>
+        This is footer
+    </footer>
+
+</body>
+
+</html>

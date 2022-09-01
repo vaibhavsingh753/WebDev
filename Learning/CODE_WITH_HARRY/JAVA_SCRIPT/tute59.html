@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date & Time In JavaScript</title>
+    <style>
+        .container{
+            font-size: 23px;
+            padding: 23px;
+            border: 2px solid red;
+            background-color: aqua;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        #time{
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">Date & Time In JavaScript</h1>
+    <div class="container" id="cont">
+        Current Time is <span id="time">
+
+        </span>
+    </div>
+
+
+
+</body>
+
+<script>
+    console.log("this is date and time tutorial");
+    let now = new Date;
+    console.log(now);
+
+    //Date(0) is the reference date , Date(1000) is 1s ot 1000ms beyond this point
+    let date = new Date(0);
+    console.log(date);
+    // Gives the date and tiem for the date mentioned in the string
+    let newdate = new Date("2029-09-30");
+    console.log(newdate);
+
+    // let newdate2 = new Date(year, month, date, hours, minutes, seconds, milliseconds);
+    let newdate2 = new Date(2022, 4, 5, 6, 7,299, 3);
+    console.log(newdate2);
+
+    let year = newdate2.getFullYear();
+    console.log("The year is " + year);
+
+    let month= newdate2.getMonth();
+    console.log("The month is " + month); // toget correct value of month do month +1 as JS starts counting from Jan taking it as 0
+
+    let dates = newdate2.getDate();
+    console.log("The date is " + dates);
+
+    let hours = newdate2.getHours();
+    console.log("The hour is " + hours);
+
+    newdate2.setDate(30)
+    let UTC = newdate2.getUTCDate();
+    console.log(UTC);
+
+    //Date.now() can be used to find the time in millisecond
+    newdate2.setMinutes(45);
+    console.log(newdate2.getMinutes());
+
+
+    setInterval(updateTime, 2000);
+
+    function updateTime(){
+        // document.getElementById("time").innerHTML = new Date();
+        time.innerHTML = new Date();
+    }
+
+
+
+</script>
+
+</html>
