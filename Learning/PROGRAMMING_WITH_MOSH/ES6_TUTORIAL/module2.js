@@ -1,4 +1,4 @@
-import { Person } from "./modules" ; // import Person class form modules.js file - this is a module
+import { Person } from "./modules.js" ; // import Person class form modules.js file - this is a module
 
 export function promote() {};
 
@@ -13,7 +13,5 @@ export default class Teachers extends Person {
 }
 
 
-const teacher = new Teachers("harry", "computers");
-teacher.walk();
-teacher.teaches();
-console.log(teacher.subject);
+// const teacher = new Teachers("harry", "computers");
+
